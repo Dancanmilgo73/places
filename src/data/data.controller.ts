@@ -5,10 +5,10 @@ import { DataService } from './data.service';
 export class DataController {
   constructor(private readonly dataService: DataService) {}
 
-  @Get()
-  async findAll() {
-    return this.dataService.findAll();
-  }
+  // @Get()
+  // async findAll() {
+  //   return this.dataService.findAll();
+  // }
 
   @Get('paginate')
   async paginate(

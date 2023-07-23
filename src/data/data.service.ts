@@ -7,9 +7,9 @@ import { Data } from './data.schema';
 export class DataService {
   constructor(@InjectModel(Data.name) private dataModel: Model<Data>) {}
 
-  async findAll(): Promise<Data[]> {
-    return this.dataModel.find().exec();
-  }
+  // async findAll(): Promise<Data[]> {
+  //   return this.dataModel.find().exec();
+  // }
 
   async paginate(page: number, limit: number): Promise<Data[]> {
     return this.dataModel.find().skip((page - 1) * limit).limit(limit).exec();
